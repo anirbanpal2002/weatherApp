@@ -9,24 +9,27 @@
 }
 
 body{
-    background-image: url(images/back.png);
+    /* background-image: url(images/back.png); */
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #555;
+    background-color: #262634;
 }
 
 .card{
     width: 90%;
-    max-width: 450px;
-    /* background: linear-gradient(135deg,#00feba,#5b548a); */
-    background: rgba(255, 255, 255, 0.2); 
+    max-width: 470px;
+    /* background: linear-gradient(1deg,#16c798,#4029d6); */
+    /* background: rgba(255, 255, 255, 0.2);  */
+    background: linear-gradient(1deg,#16c798,#223ede);
     color: #fff;
-    margin: 25px auto 0;
-    border-radius: 20px;
+    margin: 10px auto 0;
+    border-radius: 70px;
     border:1px solid;
     outline: 2px;
     padding: 40px 35px;
     text-align: center;
+    border: solid 2px;
+    box-shadow: 0 0 50px 15px #034fe8
 }
 
 .search{
@@ -44,7 +47,7 @@ body{
     padding: 10px 30px;
     height: 60px;
     border-radius: 30px;
-    width: 75%;
+    width: 90%;
     margin-right: 16px;
     font-size: 20px;
 }
@@ -65,7 +68,7 @@ body{
 }
 
 .weather-icon{
-    width: 170px;
+    width: 100px;
     margin-top: 30px;
 }
 
@@ -95,8 +98,9 @@ body{
 .col img{
     width: 40px;
     margin-right: 10px;
+    background-color: transparent;
 }
 
-.weather{ 
+/* .weather{ 
     display: none;
-}
+} */

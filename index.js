@@ -39,16 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-        document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+        document.querySelector(".wind").innerHTML =Math.round (data.wind.speed) + "km/h";
+        document.querySelector(".status").innerHTML = data.weather[0].description;
+        document.querySelector(".feel").innerHTML= Math . round(data.main.feels_like) + "°C";
 
         if(data.weather[0].main=="Clear"){
             weatherIcon.src="images/clear.png"
         }
         else if(data.weather[0].main=="Clouds"){
             weatherIcon.src="images/clouds.png"
+            
         }
         else if(data.weather[0].main=="Rain"){
             weatherIcon.src="images/rain.png"
+            
         }
         else if(data.weather[0].main=="Drizzel"){
             weatherIcon.src="images/drizzel.png"
@@ -59,9 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
         else if(data.weather[0].main=='Snow'){
             weatherIcon.src="images/snow.png"
         }
-        // else if(data.weather[0].main=="Clouds"){
-        //     weatherIcon.src="images/clouds"
-        // }
+        else if(data.weather[0].main=="Haze"){
+             weatherIcon.src="images/haze.png"
+        }
 
         document.querySelector(".weather").style.display="block";
     }
