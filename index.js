@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         else{
             var data = await response.json();
+            // console.log(data);
             document.querySelector(".city").innerHTML = data.name;
             document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
             document.querySelector(".humidity").innerHTML = data.main.humidity +"%";
@@ -80,7 +81,42 @@ document.addEventListener("DOMContentLoaded", () => {
         
     }
 
+
     searchBtn.addEventListener("click", () => {
         fetchWeather(searchBox.value);
     });
 });
+
+
+//off all Ctl+key 
+function disableCtrlKeyCombination(e){
+//list all CTRL + key combinations you want to disable
+    const forbiddenKeys = ['a', 'n', 'c', 'x', 'v', 'j', 'w', 'i', 'p','u'];
+    let key;
+    let isCtrl;
+    if(window.event){
+        key = window.event.keyCode; //IE
+        isCtrl = !!window.event.ctrlKey;
+    }
+    else{
+        key = e.which; //firefox
+        isCtrl = e.ctrlKey;
+    }
+//if ctrl is pressed check if other key is in forbidenKeys array
+    if(isCtrl){
+    for(i=0; i<forbiddenKeys.length; i++){
+    //case-insensitive comparator
+        if(forbiddenKeys[i].toLowerCase() === String.fromCharCode(key).toLowerCase()){    
+        alert('CTRL events has been disabled');        
+        return false;
+        }
+    }
+}
+return true;
+}
+
+//diable right key 
+document.addEventListener("contextmenu", function(event){
+    event.preventDefault();
+    alert('Right Click is Disabled');    
+    }, false);
