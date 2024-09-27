@@ -22,17 +22,17 @@ body{
     width: 90%;
     max-width: 450px;
     /* background: linear-gradient(1deg,#16c798,#4029d6); */
-    /* background: rgba(255, 255, 255, 0.2);  */
+    background: rgba(255, 255, 255, 0.2); 
     background: linear-gradient(1deg,#16c798,#223ede);
     color: #fff;
     margin: 10px auto 0;
-    border-radius: 70px;
-    border:1px solid;
+    border-radius: 30px;
+    /* border:1px solid; */
     outline: 2px;
     padding: 40px 35px;
     text-align: center;
-    border: solid 2px;
-    box-shadow: 0 0 50px 15px #034fe8
+    /* border: solid 2px; */
+    /* box-shadow: 0 0 50px 15px #034fe8 */
 }
 
 .search{
